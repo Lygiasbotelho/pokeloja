@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online - Pokestore</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+     Custom Import -->
+
+    <!-- <link rel="stylesheet" href="src/main.css">-->
+
+</head>
+
+<body>
+    <!--Modal de Inscrição com Sucesso-->
+
+    <!-- Modal -->
+    <div class="modal fade modSucesso" id="modalSucesso" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>-->
+                    <h1>Parabéns</h1>
+                    <p>compra realizada.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btnPrimary" data-dismiss="modal">Ok, obrigada</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <!-- Modal -->
+    <div class="modal fade modSucesso" id="carrinhoVazio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>-->
+                    <h1>Oopss</h1>
+                    <p>adicione seus produtos ao carrinho para concluir a compra.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btnPrimary" data-dismiss="modal">Ok, obrigada</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="logo" src="img/Pokemon_logo.svg" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="form-inline">
+                        <span class="ico-pesquisar"><i class="fa fa-search fa-flip-horizontal" aria-hidden="true"></i></span>
+                        <input class="form-control mr-sm-2 inpBusca" type="search" placeholder="pesquisar"
+                            aria-label="Search">
+    
+                    </form>
+                </div>
+                
+            </div>
+
+        </nav>
+
+    </header>
+
+    <section id="itens">
+        <div class="container itens">
+
+
+
+            <!--cards produtos-->
+            <div class="produtos">
+                <!---->
+
+                <div class="row">
+
+                </div>
+                <!--Montagem da API aqui-->
+                <div id="poke-container" class="container">
+                    <div class="rowP" id="row">
+                        <!---Aqui é criado dinamicamente os cards da API-->
+                    </div>
+                </div>
+                <!---->
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <!-- <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próximo</a>
+                        </li> -->
+                    </ul>
+                </nav>
+
+            </div>
+            <!--Fim cards produtos-->
+
+            <!-- Carrinho lateral-->
+            <div class="carrinho">
+                <div class="card">
+                    <div class="card-header">
+                        <h2> Carrinho</h2>
+                    </div>
+                    <ul class="list-group list-group-flush ulCarrinho">
+                    </ul>
+                    <ul class="list-group list-group-flush ul-total">
+                        <li class="list-group-item">
+                            <div class="divTotal">
+                                <div class="spnLeft">
+                                    <span>Total</span>
+                                </div>
+                                <div class="spnRight">
+                                    <span id="sp-total"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <a href="#" class="btn btnPrimary" data-toggle="modal" data-target="#modalSucesso">Finalizar &nbsp;
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </a> -->
+                    <button type="button" class="btn btnPrimary finalizarCompra">Finalizar <i class="fa fa-check"
+                            aria-hidden="true"></i></button>
+
+                </div>
+
+            </div>
+            <!--Fim carrinho-->
+
+
+        </div>
+
+    </section>
+
+    <!--Com API--
+    <section>
+        <main role="main">
+            <div class="py-5 bg-light">
+              <div class="container">
+                <div class="row" id="row">
+                </div>
+              </div>
+            </div>
+          </main>
+    </section> -->
+    <!---->
+    <!--
+    <section>        
+        <div id="poke-container" class="container">
+            <div class="row" id="row">
+               
+            </div>
+           
+        </div>
+        
+    </section> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="src/main.js"></script>
+</body>
+
+</html>

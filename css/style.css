@@ -1,0 +1,234 @@
+/*.row{
+    background-color: red;
+}*/
+/*
+.col-md-3 {
+    
+    background-color: yellow;
+    overflow:hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}*/
+nav {
+    height: 60px;
+}
+nav i{
+     font-size: 25px; 
+}
+.logo {
+    height: 30px;
+}
+.inpBusca{
+    border: none;
+    margin-left: 10px;
+}
+
+
+section {
+    margin: 30px 0;
+}
+.itens {
+    display: flex;
+}
+
+.produtos{        
+    /*  background-color: green;*/
+     /* display: flex;*/      
+      margin-right: 20px;
+      max-width: 100%;
+      
+    
+ }
+ .produtos .col-produtos {
+  /*   background-color: lightcoral;*/
+    
+     padding: 0 5px;
+ }
+ 
+ .produtos .card{    
+   border: 1px solid #fff;
+   padding: 10px 10px 0;
+   /*min-width: 170px;*/
+  /* height: 200px;*/
+    min-width: 150px;
+    align-items: center;
+   
+  /* background-color: lawngreen;*/
+ }
+ .produtos .card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: 1px solid #E6E6E6;
+ }
+ .produtos .card-body {
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+
+}
+ .produtos .card-footer{
+     background-color: #fff;
+     border: none;
+     margin-top:0;
+     padding-top: 0;
+ }
+.produtos .img-poke {
+    width: 140px;
+    max-width: 100%;
+    /*width: 50px;*/
+    margin-bottom: 5px;
+}
+.carrinho{
+    max-width: 100%;
+    min-width: 280px;
+   /* display: flex;*/
+   /* background-color: blue;*/
+}
+.carrinho li:hover{
+    background-color: #F2F2F2;
+}
+.carrinho h2 {
+    font-family: Yeseva One;
+    text-align: center;
+    font-weight: bold;
+}
+.carrinhoNome {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.duasColunas {
+    display: flex;
+    height: 30px;
+}
+.duasColunas h5 {
+    font-size: 16px;
+    color: #424242;
+}
+
+.duasColunas img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}  
+.duasColunas .remove{
+    margin-left: 5px;
+    /*border-left: 1px solid red;*/
+    color: #A4A4A4;
+    margin-top: -5px;
+    background-color: transparent;
+    border: none;
+}
+.duasColunas .remove:hover {
+    color: #B40404;
+   
+}
+
+.divTotal{
+    display: flex;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #585858;
+}
+
+.spnLeft{
+    width: 50%;
+    text-align: left;
+    display: flex;
+  /*  background-color: tomato;*/
+}
+
+.spnRight{
+    width: 50%;
+    text-align: right;
+    
+  /*  background-color: green;*/
+}
+.btnPrimary{
+    margin-top: 5px;
+    width: 100%;
+    font-weight: bold;
+    background-color: #FE642E;
+    color: #fff;
+}
+.btnPrimary:hover {
+      color: #fff;
+      background-color: #FF4000;/*#088A29;/*#DF3A01;*/
+}
+
+.modSucesso{
+    text-align: center;
+}
+/*Placeholders*/
+::-webkit-input-placeholder {
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+  }
+  ::-moz-placeholder {
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+  }
+  ::placeholder {
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  /*medias*/
+  @media screen and (max-width: 1000px) {
+    .ico-pesquisar {
+          display: none;
+    }
+    .inpBusca{
+        margin-top: 20px;
+    }
+    .itens{
+        display: inline;        
+    }/*
+   .produtos, .carrinho{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .carrinho{
+      margin-top: 20px;
+  } */
+}
+
+/*
+#container {
+    margin: auto;
+}
+
+#poke-container {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+}
+
+#header-container {
+    border-radius: 0px !important;
+}
+
+#header-text{
+    margin: 0 auto;
+}
+
+#generate-pokemon {
+    margin: 0 auto;
+}
+
+#delete-btn {
+    position: absolute;
+    left: 85%;
+    display: none;
+    margin-bottom: 5%;
+}*/
