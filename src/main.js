@@ -2,6 +2,8 @@
 const listPokeCarrinho = [];
 
 const listPoke = [];
+let total=0;
+const $contCarrinho = $("#cont-carrinho");
 
 console.log('You have connected...')
 
@@ -273,7 +275,7 @@ function renderPokemon(pokeData) {
     card.appendChild(cardFooter);
     cardFooter.appendChild(addProdutoCarrinho);
     
-    addPokeLista(pokeData);                
+    //addPokeLista(pokeData);                
 
     // let pokeObj2 = { id: pokeData.id, name: pokeData.name, price: pokeData.id };
     // listPoke.push(pokeObj2);
@@ -317,6 +319,8 @@ function addPokeCarrinho(objectPoke) {
 
     const $ul = $(".ulCarrinho");
     const $spTotal = $("#sp-total");
+   
+
     total = total + parseFloat(objectPoke.price);
 
     const $li = `<li class="list-group-item itemCarrinho">
@@ -335,6 +339,7 @@ function addPokeCarrinho(objectPoke) {
     </li>`;
     $ul.append($li);
     $spTotal.text("R$ " + total + ",00");
+    $contCarrinho.text(listPokeCarrinho.length);
     console.log("Carrinho:", listPokeCarrinho.length);
 }
 
@@ -344,6 +349,7 @@ function removePokeCarrinho(pokeId) {
     total = total - parseFloat(pokes[0].price);
     $spTotal.text("R$ " + total + ",00");
     listPokeCarrinho.splice(listPokeCarrinho.indexOf(pokes[0]), 1);
+    $contCarrinho.text(listPokeCarrinho.length);
     console.log(listPokeCarrinho.length);
 }
 
@@ -370,6 +376,7 @@ function finalizarCarrinho() {
 
         listPokeCarrinho.splice(0, listPokeCarrinho.length);
         var itens = $(".itemCarrinho").remove();
+        $contCarrinho.text(listPokeCarrinho.length);
     }
 
 }

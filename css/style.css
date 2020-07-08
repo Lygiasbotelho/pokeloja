@@ -94,6 +94,9 @@ section {
     text-align: center;
     font-weight: bold;
 }
+.carrinho .cont-carrinho {
+    position: relative; top: -0.5em; font-size: 50%;
+}
 .carrinhoNome {
     font-size: 16px;
     line-height: 1.8;
