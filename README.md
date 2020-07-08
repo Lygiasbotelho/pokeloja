@@ -1,3 +1,6 @@
-Base:
-[https://medium.com/@sergio13prez/fetching-them-all-poke-api-62ca580981a2]
+Desafio do programa Hiring Coders.
+
+Objetivo: Construir uma loja de pokemons com busca na API e resumo do carrinho de compras.
+
+Tecnologias utilizadas: HTML, CSS, JS
 
