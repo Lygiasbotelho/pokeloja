@@ -77,8 +77,15 @@ function renderPagination(total, limite, offSetAPI) {
         //   $ulPagination.append(li);
         // "https://pokeapi.co/api/v2/pokemon?limit="+ limite + "&offset=" + offSetAPI;
         li = `<li class="page-item ${classActive}">
-        <a class="page-link" href="http://127.0.0.1:5500/?limit=${limite}&offset=${offSetAPI}">${pagina+1}</a></li>`;
+        <a class="page-link" href="#">${pagina+1}</a></li>`;
         $ulPagination.append(li);
+
+
+        /* Atual
+        li = `<li class="page-item ${classActive}">
+        <a class="page-link" href="http://127.0.0.1:5500/?limit=${limite}&offset=${offSetAPI}">${pagina+1}</a></li>`;
+        $ulPagination.append(li);*/
+
         /* li = `<li class="page-item ${classActive}">
         <a class="page-link" href="http://127.0.0.1:5500/?limit=${limite}&offset=${offSetAPI}">${pagina+1}</a></li>`;
         $ulPagination.append(li);*/
